@@ -44,7 +44,7 @@ public class NumericalSequence {
     * @param numForCheck - integer value to be compared with elements of sequence
     * @return - first greater then numForCheck element of sequence
     */
-    public int getNumberMoreThen(int numForCheck) {
+    public int getGreaterNumber(int numForCheck) {
         int targetNumber = 1;
         int currentNumber = 1;
         while (targetNumber <= numForCheck) {
@@ -53,4 +53,30 @@ public class NumericalSequence {
         }
         return targetNumber;
     }
+
+    /**
+     * 6.15. Дано вещественное число а. Из чисел 1,1 + 1/2  ,1 + 1/3   , ..., напечатать те, которые меньше а.
+     * <p>
+     * Print elements of sequence lesser then target value numForCheck.
+     *
+     * @param numForCheck - number for compare with elements of sequence
+     */
+    public void printLesserElements(double numForCheck) {
+        if (numForCheck <= 1) {
+            System.out.println("number is too small");
+        } else {
+            double currentDivider = 1;
+            double currentElement = 1;
+            while (currentElement <= numForCheck) {
+                System.out.println(currentElement);
+                currentDivider++;
+                currentElement = currentElement + (1 / currentDivider);
+                if (currentDivider > 1000) {
+                    System.out.println("sorry, too long to calculate");
+                    break;
+                }
+            }
+        }
+    }
 }
+

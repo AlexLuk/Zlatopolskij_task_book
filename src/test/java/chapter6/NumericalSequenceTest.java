@@ -6,13 +6,32 @@ import static org.junit.Assert.assertEquals;
 
 public class NumericalSequenceTest {
     @Test
-    public void getNumberMoreThen() throws Exception {
+    public void printLesserElements() throws Exception {
         NumericalSequence numericalSequence = new NumericalSequence();
-        assertEquals(1,numericalSequence.getNumberMoreThen(0));
-        assertEquals(4,numericalSequence.getNumberMoreThen(1));
-        assertEquals(4,numericalSequence.getNumberMoreThen(2));
-        assertEquals(4,numericalSequence.getNumberMoreThen(3));
-        assertEquals(9,numericalSequence.getNumberMoreThen(4));
+        numericalSequence.printLesserElements(0.1);
+        System.out.println("----");
+        numericalSequence.printLesserElements(1);
+        System.out.println("----");
+        numericalSequence.printLesserElements(1.1);
+        System.out.println("----");
+        numericalSequence.printLesserElements(1.5);
+        System.out.println("----");
+        numericalSequence.printLesserElements(1.9);
+        System.out.println("----");
+        numericalSequence.printLesserElements(2);
+        System.out.println("----");
+        numericalSequence.printLesserElements(7);
+        System.out.println("----");
+    }
+
+    @Test
+    public void getGreaterNumber() throws Exception {
+        NumericalSequence numericalSequence = new NumericalSequence();
+        assertEquals(1, numericalSequence.getGreaterNumber(0));
+        assertEquals(4, numericalSequence.getGreaterNumber(1));
+        assertEquals(4, numericalSequence.getGreaterNumber(2));
+        assertEquals(4, numericalSequence.getGreaterNumber(3));
+        assertEquals(9, numericalSequence.getGreaterNumber(4));
     }
 
     @Test
